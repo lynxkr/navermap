@@ -12,7 +12,25 @@
 		5CD9A73821520D8C00759D44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A73621520D8C00759D44 /* Main.storyboard */; };
 		5CD9A73A21520D8F00759D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A73921520D8F00759D44 /* Assets.xcassets */; };
 		5CD9A73D21520D8F00759D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CD9A73B21520D8F00759D44 /* LaunchScreen.storyboard */; };
+		5CD9A74621520E1A00759D44 /* NMapViewerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A74521520E1A00759D44 /* NMapViewerSDK.framework */; };
+		5CD9A74821520E2800759D44 /* ApiGatewayMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A74721520E2800759D44 /* ApiGatewayMac.framework */; };
+		5CD9A74921520E2800759D44 /* ApiGatewayMac.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5CD9A74721520E2800759D44 /* ApiGatewayMac.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5CD9A74E215213BB00759D44 /* NMapViewResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9A74D215213BB00759D44 /* NMapViewResources.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5CD9A74A21520E2800759D44 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5CD9A74921520E2800759D44 /* ApiGatewayMac.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5CD9A72F21520D8C00759D44 /* exampleMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = exampleMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +40,10 @@
 		5CD9A73921520D8F00759D44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CD9A73C21520D8F00759D44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5CD9A73E21520D8F00759D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CD9A74521520E1A00759D44 /* NMapViewerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMapViewerSDK.framework; path = "../../../Downloads/maps.ios-master/Frameworks/NMapViewerSDK.framework"; sourceTree = "<group>"; };
+		5CD9A74721520E2800759D44 /* ApiGatewayMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ApiGatewayMac.framework; sourceTree = "<group>"; };
+		5CD9A74C21520FDC00759D44 /* exampleMap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "exampleMap-Bridging-Header.h"; sourceTree = "<group>"; };
+		5CD9A74D215213BB00759D44 /* NMapViewResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NMapViewResources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CD9A74821520E2800759D44 /* ApiGatewayMac.framework in Frameworks */,
+				5CD9A74621520E1A00759D44 /* NMapViewerSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +62,10 @@
 		5CD9A72621520D8C00759D44 = {
 			isa = PBXGroup;
 			children = (
+				5CD9A74721520E2800759D44 /* ApiGatewayMac.framework */,
 				5CD9A73121520D8C00759D44 /* exampleMap */,
 				5CD9A73021520D8C00759D44 /* Products */,
+				5CD9A74421520E1A00759D44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +80,9 @@
 		5CD9A73121520D8C00759D44 /* exampleMap */ = {
 			isa = PBXGroup;
 			children = (
+				5CD9A74C21520FDC00759D44 /* exampleMap-Bridging-Header.h */,
 				5CD9A73221520D8C00759D44 /* AppDelegate.swift */,
+				5CD9A74D215213BB00759D44 /* NMapViewResources.swift */,
 				5CD9A73421520D8C00759D44 /* ViewController.swift */,
 				5CD9A73621520D8C00759D44 /* Main.storyboard */,
 				5CD9A73921520D8F00759D44 /* Assets.xcassets */,
@@ -62,6 +90,14 @@
 				5CD9A73E21520D8F00759D44 /* Info.plist */,
 			);
 			path = exampleMap;
+			sourceTree = "<group>";
+		};
+		5CD9A74421520E1A00759D44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9A74521520E1A00759D44 /* NMapViewerSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +110,8 @@
 				5CD9A72B21520D8C00759D44 /* Sources */,
 				5CD9A72C21520D8C00759D44 /* Frameworks */,
 				5CD9A72D21520D8C00759D44 /* Resources */,
+				5CD9A74A21520E2800759D44 /* Embed Frameworks */,
+				5CD9A74B21520F0D00759D44 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -130,12 +168,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CD9A74B21520F0D00759D44 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/kimjihun/Downloads/maps.ios-master/Scripts/strip-frameworks.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5CD9A72B21520D8C00759D44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5CD9A73521520D8C00759D44 /* ViewController.swift in Sources */,
+				5CD9A74E215213BB00759D44 /* NMapViewResources.swift in Sources */,
 				5CD9A73321520D8C00759D44 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,13 +337,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UJU382848X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = exampleMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.exampleMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/exampleMap/exampleMap-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -300,13 +364,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UJU382848X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = exampleMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-lxml2",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = kr.xoul.exampleMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/exampleMap/exampleMap-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
